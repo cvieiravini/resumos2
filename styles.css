@@ -1,0 +1,200 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:500';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+}
+.exclude {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #e7e7e7;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #4755d6
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(71, 85, 214);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(71, 85, 214, 0.7);
+}
+
+.summary {
+    
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+body {
+    color: #ededed;
+}
+
+.home {
+    font-family: "Montserrat", sans-serif;
+        display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+}
+
+.home-content {
+    max-width: 800px;
+    padding-right: 50px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4755d6;
+}
+.home-content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #4755d6;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    height: 50px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #4755d6;
+    border: 2px solid #4755d6;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #24252a;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #4755d6;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #4755d6;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #4755d6;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #24252a;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+/* Adicione estas regras no final do seu arquivo CSS */
+
+/* Estilos para telas menores (ex: dispositivos móveis) */
+@media (max-width: 768px) {
+    header {
+      justify-content: center; /* Centralizar links no header */
+      padding: 20px 10%; /* Reduzir o padding do header */
+    }
+  
+    .nav__links li {
+      padding: 0px 10px; /* Reduzir o espaçamento entre os links no header */
+    }
+  
+    .home {
+      flex-direction: column; /* Empilhar conteúdo em telas menores */
+    }
+  
+    .home-content {
+      max-width: 100%; /* Utilizar a largura total disponível */
+      padding: 0; /* Remover o padding na direita */
+    }
+  
+    .home-content h1 {
+      font-size: 36px; /* Reduzir o tamanho da fonte para h1 */
+    }
+  
+    .home-content h3,
+    .home-content h4 {
+      font-size: 24px; /* Reduzir o tamanho da fonte para h3 e h4 */
+    }
+  
+    .home-content p {
+      font-size: 16px;
+    }
+  
+    .home-content img {
+      max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do container */
+      height: auto; /* Manter a proporção da imagem */
+    }
+  }
+  
